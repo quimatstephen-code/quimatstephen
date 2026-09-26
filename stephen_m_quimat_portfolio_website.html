@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephen M. Quimat | Brand Marketing Professional</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        stonebg: '#FAFAF9',
+                        navy: {
+                            800: '#1E293B',
+                            900: '#0F172A',
+                        },
+                        accent: {
+                            50: '#EFF6FF',
+                            100: '#DBEAFE',
+                            600: '#2563EB',
+                            700: '#1D4ED8',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAFAF9;
+            color: #1E293B;
+        }
+        .glass-nav {
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+        }
+        .toast-transition {
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-accent-600 selection:text-white">
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-stone-200/60">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#home" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-full bg-navy-900 text-white flex items-center justify-center font-bold text-sm group-hover:bg-accent-600 transition-colors">
+                    SQ
+                </div>
+                <div>
+                    <span class="font-bold text-lg text-navy-900 tracking-tight block leading-none">Stephen Quimat</span>
+                    <span class="text-xs text-stone-500 font-medium">Brand Marketing</span>
+                </div>
+            </a>
+
+            <!-- Desktop Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-accent-600 transition-colors">About</a>
+                <a href="#experience" class="hover:text-accent-600 transition-colors">Work Experience</a>
+                <a href="#skills" class="hover:text-accent-600 transition-colors">Skills</a>
+                <a href="#education" class="hover:text-accent-600 transition-colors">Education</a>
+            </nav>
+
+            <!-- Header Action -->
+            <div class="hidden sm:flex items-center space-x-4">
+                <a href="#contact" class="px-5 py-2.5 rounded-full bg-navy-900 hover:bg-accent-600 text-white text-sm font-medium shadow-sm transition-all duration-200">
+                    Get in Touch
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" aria-label="Toggle Mobile Navigation" class="md:hidden p-2 text-slate-700 hover:bg-stone-100 rounded-lg">
+                <i data-lucide="menu" class="w-6 h-6" id="menu-icon-open"></i>
+                <i data-lucide="x" class="w-6 h-6 hidden" id="menu-icon-close"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-stone-200 px-6 py-4 space-y-3">
+            <a href="#about" class="mobile-link block text-base font-medium text-slate-700 hover:text-accent-600 py-1">About</a>
+            <a href="#experience" class="mobile-link block text-base font-medium text-slate-700 hover:text-accent-600 py-1">Work Experience</a>
+            <a href="#skills" class="mobile-link block text-base font-medium text-slate-700 hover:text-accent-600 py-1">Skills</a>
+            <a href="#education" class="mobile-link block text-base font-medium text-slate-700 hover:text-accent-600 py-1">Education</a>
+            <a href="#contact" class="mobile-link block text-base font-semibold text-accent-600 pt-2">Contact Stephen</a>
+        </div>
+    </header>
+
+    <!-- Two-Column Personal Hero Section -->
+    <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 bg-stonebg overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Column: Confident Personal Intro -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-accent-50 text-accent-700 text-xs font-semibold tracking-wide border border-accent-100">
+                        <span class="w-2 h-2 rounded-full bg-accent-600"></span>
+                        <span>Metro Retail Stores Group, Inc.</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-navy-900 tracking-tight leading-tight">
+                        Stephen M. Quimat
+                    </h1>
+
+                    <p class="text-xl sm:text-2xl font-semibold text-accent-600">
+                        Brand Marketing Professional
+                    </p>
+
+                    <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl">
+                        Results-driven marketing professional with hands-on experience in retail marketing, promotional campaigns, store openings, events, and digital marketing. Proven ability to translate marketing plans into organized, timely, and customer-focused executions.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="pt-4 flex flex-wrap items-center gap-4">
+                        <a href="#experience" class="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-navy-900 hover:bg-accent-600 text-white font-medium text-sm transition-all duration-200 shadow-md hover:shadow-lg group">
+                            <span>View My Work</span>
+                            <i data-lucide="arrow-down" class="w-4 h-4 ml-2 group-hover:translate-y-0.5 transition-transform"></i>
+                        </a>
+
+                        <button onclick="downloadResumeSummary()" class="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-white border border-stone-300 hover:border-slate-400 text-slate-700 font-medium text-sm transition-all duration-200 hover:bg-stone-50 shadow-sm">
+                            <i data-lucide="download" class="w-4 h-4 mr-2 text-accent-600"></i>
+                            <span>Resume Summary</span>
+                        </button>
+                    </div>
+
+                    <!-- Location & Direct Link -->
+                    <div class="pt-4 flex items-center space-x-6 text-xs font-medium text-slate-500">
+                        <span class="flex items-center">
+                            <i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1.5 text-accent-600"></i>
+                            Lapu-Lapu City, Cebu
+                        </span>
+                        <span class="flex items-center">
+                            <i data-lucide="check-circle" class="w-3.5 h-3.5 mr-1.5 text-emerald-500"></i>
+                            Available for Marketing Initiatives
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Right Column: Prominent Portrait Frame -->
+                <div class="lg:col-span-5 flex justify-center lg:justify-end">
+                    <div class="relative w-full max-w-md">
+                        <!-- Subtle Background Accent Layer -->
+                        <div class="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-accent-100 to-stone-200 blur-xl opacity-70 -z-10"></div>
+                        
+                        <!-- Main Image Container Frame -->
+                        <div class="relative rounded-2xl bg-white p-3 shadow-xl border border-stone-200/80">
+                            <div class="aspect-[4/5] rounded-xl overflow-hidden bg-stone-100 relative group">
+                                
+                                <!-- Headshot Visual Graphic Overlay -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-navy-900/60 via-transparent to-transparent z-10 opacity-60"></div>
+                                
+                                <!-- Portrait Vector Placeholder / Professional Graphic Representation -->
+                                <svg class="w-full h-full object-cover text-stone-300" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="400" height="500" fill="#F1F5F9"/>
+                                    <!-- Background Studio Aura -->
+                                    <circle cx="200" cy="200" r="160" fill="#DBEAFE" fill-opacity="0.6"/>
+                                    <!-- Shoulders & Suit -->
+                                    <path d="M60 480C60 380 120 320 200 320C280 320 340 380 340 480V500H60V480Z" fill="#1E293B"/>
+                                    <!-- Shirt Collar -->
+                                    <path d="M160 320L200 370L240 320H160Z" fill="#FFFFFF"/>
+                                    <path d="M190 320L200 400L210 320H190Z" fill="#2563EB"/>
+                                    <!-- Face & Neck -->
+                                    <path d="M165 270H235V330H165V270Z" fill="#E2E8F0"/>
+                                    <path d="M140 180C140 120 165 100 200 100C235 100 260 120 260 180C260 250 235 280 200 280C165 280 140 250 140 180Z" fill="#CBD5E1"/>
+                                    <!-- Hair Styling -->
+                                    <path d="M135 170C135 110 160 85 200 85C240 85 265 110 265 170C265 130 240 95 200 95C160 95 135 130 135 170Z" fill="#0F172A"/>
+                                    <!-- Modern Minimal Glasses Outline -->
+                                    <rect x="155" y="160" width="35" height="22" rx="4" stroke="#0F172A" stroke-width="3" fill="none"/>
+                                    <rect x="210" y="160" width="35" height="22" rx="4" stroke="#0F172A" stroke-width="3" fill="none"/>
+                                    <line x1="190" y1="170" x2="210" y2="170" stroke="#0F172A" stroke-width="3"/>
+                                </svg>
+
+                                <!-- Floating Badge Overlay -->
+                                <div class="absolute bottom-4 left-4 right-4 z-20 bg-white/95 backdrop-blur-md p-3.5 rounded-xl border border-stone-200/80 shadow-md">
+                                    <p class="text-xs font-bold text-navy-900">Stephen M. Quimat</p>
+                                    <p class="text-[11px] font-medium text-accent-600">Supermarket Brand Marketing Supervisor</p>
+                                    <p class="text-[10px] text-slate-500 mt-0.5">Metro Retail Stores Group, Inc.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Core Specializations -->
+    <section id="about" class="py-20 bg-white border-t border-b border-stone-200/80">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-3xl mb-12">
+                <p class="text-xs font-semibold tracking-wider uppercase text-accent-600 mb-2">Capabilities</p>
+                <h2 class="text-3xl font-bold text-navy-900 tracking-tight">Core Marketing Pillars</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Pillar 1 -->
+                <div class="p-6 rounded-2xl bg-stonebg border border-stone-200 hover:border-slate-300 transition-colors shadow-sm">
+                    <div class="w-10 h-10 rounded-xl bg-accent-50 text-accent-600 flex items-center justify-center mb-5 font-bold">
+                        <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-base mb-2">Retail Promotions</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Planning and executing promotional campaigns across Metro Supermarket branches to elevate store visibility and drive customer engagement.</p>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="p-6 rounded-2xl bg-stonebg border border-stone-200 hover:border-slate-300 transition-colors shadow-sm">
+                    <div class="w-10 h-10 rounded-xl bg-accent-50 text-accent-600 flex items-center justify-center mb-5 font-bold">
+                        <i data-lucide="store" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-base mb-2">Store Openings</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Coordinating timelines, on-ground logistics, and supplier partnerships to launch new branch openings seamlessly from concept to launch.</p>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="p-6 rounded-2xl bg-stonebg border border-stone-200 hover:border-slate-300 transition-colors shadow-sm">
+                    <div class="w-10 h-10 rounded-xl bg-accent-50 text-accent-600 flex items-center justify-center mb-5 font-bold">
+                        <i data-lucide="share-2" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-base mb-2">Digital & Social</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Creating and scheduling social media content, managing Meta Business Suite, and maintaining consistent brand messaging across digital platforms.</p>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="p-6 rounded-2xl bg-stonebg border border-stone-200 hover:border-slate-300 transition-colors shadow-sm">
+                    <div class="w-10 h-10 rounded-xl bg-accent-50 text-accent-600 flex items-center justify-center mb-5 font-bold">
+                        <i data-lucide="users" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-base mb-2">Team Leadership</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Guiding marketing interns and support staff, aligning cross-functional teams with Operations and Procurement to keep projects on schedule.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="py-20 bg-stonebg">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <p class="text-xs font-semibold tracking-wider uppercase text-accent-600 mb-2">Track Record</p>
+                    <h2 class="text-3xl font-bold text-navy-900 tracking-tight">Professional Experience</h2>
+                </div>
+                <p class="text-xs text-slate-500 mt-2 md:mt-0">Hands-on leadership in retail marketing & campaign coordination</p>
+            </div>
+
+            <div class="space-y-8">
+                
+                <!-- Role 1: Brand Marketing Supervisor -->
+                <div class="bg-white p-8 rounded-2xl border border-stone-200 shadow-sm relative overflow-hidden">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6 pb-6 border-b border-stone-100">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-accent-50 text-accent-700 mb-2">Current Position</span>
+                            <h3 class="text-xl font-bold text-navy-900">Brand Marketing Supervisor - Supermarket</h3>
+                            <p class="text-sm font-semibold text-slate-600">Metro Retail Stores Group, Inc. (MRSGI)</p>
+                        </div>
+                        <span class="text-xs font-semibold text-slate-500 bg-stonebg px-3.5 py-1.5 rounded-full border border-stone-200 self-start sm:self-center">
+                            July 2026 – Present
+                        </span>
+                    </div>
+
+                    <ul class="space-y-3 text-sm text-slate-600">
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-4 h-4 text-accent-600 mr-2.5 shrink-0 mt-0.5"></i>
+                            <span>Taking on greater responsibility in campaign execution, coordination, and team leadership.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-4 h-4 text-accent-600 mr-2.5 shrink-0 mt-0.5"></i>
+                            <span>Lead the planning and execution of retail promotions, store openings, and marketing initiatives.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-4 h-4 text-accent-600 mr-2.5 shrink-0 mt-0.5"></i>
+                            <span>Manage budgets, timelines, promotional materials, and on-ground requirements from planning to execution.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-4 h-4 text-accent-600 mr-2.5 shrink-0 mt-0.5"></i>
+                            <span>Coordinate with Marketing, Operations, Store Teams, Procurement, suppliers, and external partners to ensure smooth campaign execution.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-4 h-4 text-accent-600 mr-2.5 shrink-0 mt-0.5"></i>
+                            <span>Guide and oversee marketing interns and support staff, ensuring tasks are properly assigned and completed on time.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-4 h-4 text-accent-600 mr-2.5 shrink-0 mt-0.5"></i>
+                            <span>Develop creative concepts, promotional executions, and in-store displays while resolving execution issues to keep campaigns on schedule.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Role 2: Brand Marketing Assistant -->
+                <div class="bg-white p-8 rounded-2xl border border-stone-200 shadow-sm">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6 pb-6 border-b border-stone-100">
+                        <div>
+                            <h3 class="text-xl font-bold text-navy-900">Brand Marketing Assistant - Supermarket</h3>
+                            <p class="text-sm font-semibold text-slate-600">Metro Retail Stores Group, Inc. (MRSGI)</p>
+                        </div>
+                        <span class="text-xs font-semibold text-slate-500 bg-stonebg px-3.5 py-1.5 rounded-full border border-stone-200 self-start sm:self-center">
+                            July 2025 – July 2026
+                        </span>
+                    </div>
+
+                    <ul class="space-y-3 text-sm text-slate-600">
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-4 h-4 text-slate-400 mr-2.5 shrink-0 mt-0.5"></i>
+                            <span>Supported the planning and execution of retail promotions and store openings across Metro Supermarket branches.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-4 h-4 text-slate-400 mr-2.5 shrink-0 mt-0.5"></i>
+                            <span>Coordinated campaign timelines, deliverables, and on-ground requirements with internal teams and external partners.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-4 h-4 text-slate-400 mr-2.5 shrink-0 mt-0.5"></i>
+                            <span>Developed creative concepts and layouts to improve in-store visibility and promotions.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="w-4 h-4 text-slate-400 mr-2.5 shrink-0 mt-0.5"></i>
+                            <span>Facilitated focus group discussions and customer insights to support marketing decisions.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Role 3: General Virtual Assistant & Internship -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <!-- Freelance -->
+                    <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-slate-500 bg-stonebg px-3 py-1 rounded-full border border-stone-200 inline-block mb-3">March 2024 – July 2025</span>
+                            <h3 class="text-lg font-bold text-navy-900">General Virtual Assistant</h3>
+                            <p class="text-xs font-semibold text-slate-500 mb-4">Freelance | Social Media Marketing</p>
+                            <ul class="space-y-2 text-xs text-slate-600">
+                                <li>• Delivered administrative coordination, content creation, copywriting, and basic graphic design.</li>
+                                <li>• Managed social media scheduling to maintain consistent brand communication.</li>
+                                <li>• Maintained organized workflows across multiple client requirements.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Internship -->
+                    <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-slate-500 bg-stonebg px-3 py-1 rounded-full border border-stone-200 inline-block mb-3">February 2025 – June 2025</span>
+                            <h3 class="text-lg font-bold text-navy-900">Sales & Marketing Intern</h3>
+                            <p class="text-xs font-semibold text-slate-500 mb-4">The Hospital at Maayo (THAM)</p>
+                            <ul class="space-y-2 text-xs text-slate-600">
+                                <li>• Supported healthcare marketing initiatives, event promotions, and social media scheduling.</li>
+                                <li>• Documented and promoted hospital events to expand audience reach.</li>
+                                <li>• Provided administrative & creative campaign execution support.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Toolkit & Skills -->
+    <section id="skills" class="py-20 bg-white border-t border-b border-stone-200/80">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-3xl mb-12">
+                <p class="text-xs font-semibold tracking-wider uppercase text-accent-600 mb-2">Technical Toolkit</p>
+                <h2 class="text-3xl font-bold text-navy-900 tracking-tight">Skills & Tools</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Skill Group 1 -->
+                <div class="p-6 rounded-2xl bg-stonebg border border-stone-200">
+                    <h3 class="font-bold text-navy-900 text-sm mb-4 flex items-center">
+                        <i data-lucide="pen-tool" class="w-4 h-4 text-accent-600 mr-2"></i>
+                        Creative & Graphic Design
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white rounded-lg text-xs font-medium text-slate-700 border border-stone-200 shadow-xs">Canva</span>
+                        <span class="px-3 py-1 bg-white rounded-lg text-xs font-medium text-slate-700 border border-stone-200 shadow-xs">CapCut</span>
+                        <span class="px-3 py-1 bg-white rounded-lg text-xs font-medium text-slate-700 border border-stone-200 shadow-xs">Content Creation</span>
+                        <span class="px-3 py-1 bg-white rounded-lg text-xs font-medium text-slate-700 border border-stone-200 shadow-xs">Copywriting</span>
+                        <span class="px-3 py-1 bg-white rounded-lg text-xs font-medium text-slate-700 border border-stone-200 shadow-xs">Basic Graphic Design</span>
+                    </div>
+                </div>
+
+                <!-- Skill Group 2 -->
+                <div class="p-6 rounded-2xl bg-stonebg border border-stone-200">
+                    <h3 class="font-bold text-navy-900 text-sm mb-4 flex items-center">
+                        <i data-lucide="layout" class="w-4 h-4 text-accent-600 mr-2"></i>
+                        Digital Marketing
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white rounded-lg text-xs font-medium text-slate-700 border border-stone-200 shadow-xs">Facebook Meta Business Suite</span>
+                        <span class="px-3 py-1 bg-white rounded-lg text-xs font-medium text-slate-700 border border-stone-200 shadow-xs">Social Media Management</span>
+                        <span class="px-3 py-1 bg-white rounded-lg text-xs font-medium text-slate-700 border border-stone-200 shadow-xs">Promotions</span>
+                    </div>
+                </div>
+
+                <!-- Skill Group 3 -->
+                <div class="p-6 rounded-2xl bg-stonebg border border-stone-200">
+                    <h3 class="font-bold text-navy-900 text-sm mb-4 flex items-center">
+                        <i data-lucide="sparkles" class="w-4 h-4 text-accent-600 mr-2"></i>
+                        AI & Automation
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white rounded-lg text-xs font-medium text-slate-700 border border-stone-200 shadow-xs">ChatGPT</span>
+                        <span class="px-3 py-1 bg-white rounded-lg text-xs font-medium text-slate-700 border border-stone-200 shadow-xs">GEMINI</span>
+                        <span class="px-3 py-1 bg-white rounded-lg text-xs font-medium text-slate-700 border border-stone-200 shadow-xs">AI Prompting</span>
+                    </div>
+                </div>
+
+                <!-- Skill Group 4 -->
+                <div class="p-6 rounded-2xl bg-stonebg border border-stone-200">
+                    <h3 class="font-bold text-navy-900 text-sm mb-4 flex items-center">
+                        <i data-lucide="file-check" class="w-4 h-4 text-accent-600 mr-2"></i>
+                        Productivity Tools
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white rounded-lg text-xs font-medium text-slate-700 border border-stone-200 shadow-xs">Google Workspace</span>
+                        <span class="px-3 py-1 bg-white rounded-lg text-xs font-medium text-slate-700 border border-stone-200 shadow-xs">Microsoft Word</span>
+                        <span class="px-3 py-1 bg-white rounded-lg text-xs font-medium text-slate-700 border border-stone-200 shadow-xs">Microsoft Excel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section id="education" class="py-20 bg-stonebg">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Education Column -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div>
+                        <p class="text-xs font-semibold tracking-wider uppercase text-accent-600 mb-2">Academics</p>
+                        <h2 class="text-2xl font-bold text-navy-900 tracking-tight">Education</h2>
+                    </div>
+
+                    <!-- Degree 1 -->
+                    <div class="p-6 rounded-2xl bg-white border border-stone-200 shadow-sm">
+                        <span class="text-xs font-semibold text-slate-500 bg-stonebg px-3 py-1 rounded-full border border-stone-200 inline-block mb-3">A.Y. 2024 – 2025</span>
+                        <h3 class="text-base font-bold text-navy-900">Bachelor of Science in Business Administration</h3>
+                        <p class="text-xs font-semibold text-accent-600 mb-2">Major in Marketing Management</p>
+                        <p class="text-xs text-slate-600">Cebu Technological University (CTU)</p>
+                    </div>
+
+                    <!-- Degree 2 -->
+                    <div class="p-6 rounded-2xl bg-white border border-stone-200 shadow-sm">
+                        <span class="text-xs font-semibold text-slate-500 bg-stonebg px-3 py-1 rounded-full border border-stone-200 inline-block mb-3">S.Y. 2020 – 2021</span>
+                        <h3 class="text-base font-bold text-navy-900">Technical-Vocational Livelihood (TVL)</h3>
+                        <p class="text-xs font-semibold text-accent-600 mb-2">Major in Information and Communication Technology</p>
+                        <p class="text-xs text-slate-600 mb-2">Asian Learning Center</p>
+                        <span class="inline-block px-2.5 py-0.5 rounded text-[11px] font-semibold bg-emerald-100 text-emerald-800">
+                            Achiever / With Honors
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Certifications Column -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div>
+                        <p class="text-xs font-semibold tracking-wider uppercase text-accent-600 mb-2">Qualifications</p>
+                        <h2 class="text-2xl font-bold text-navy-900 tracking-tight">Certifications & Training</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-5 rounded-xl bg-white border border-stone-200 shadow-sm">
+                            <h4 class="font-bold text-navy-900 text-sm mb-1">Google Workspace Training</h4>
+                            <p class="text-xs text-slate-500 mb-2">Metro Retail Stores Group Inc.</p>
+                            <span class="text-[11px] text-slate-400">July 2026</span>
+                        </div>
+
+                        <div class="p-5 rounded-xl bg-white border border-stone-200 shadow-sm">
+                            <h4 class="font-bold text-navy-900 text-sm mb-1">Healthcare Admin Training</h4>
+                            <p class="text-xs text-slate-500 mb-2">Brightroot Virtual Assistants</p>
+                            <span class="text-[11px] text-slate-400">September 2026</span>
+                        </div>
+
+                        <div class="p-5 rounded-xl bg-white border border-stone-200 shadow-sm">
+                            <h4 class="font-bold text-navy-900 text-sm mb-1">US Medical Billing Program</h4>
+                            <p class="text-xs text-slate-500 mb-2">Brightroot Virtual Assistants</p>
+                            <span class="text-[11px] text-slate-400">September 2026</span>
+                        </div>
+
+                        <div class="p-5 rounded-xl bg-white border border-stone-200 shadow-sm">
+                            <h4 class="font-bold text-navy-900 text-sm mb-1">HIPAA Compliance Training</h4>
+                            <p class="text-xs text-slate-500 mb-2">Brightroot Virtual Assistants</p>
+                            <span class="text-[11px] text-slate-400">September 2026</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white border-t border-stone-200/80">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-xl text-center mx-auto mb-16">
+                <p class="text-xs font-semibold tracking-wider uppercase text-accent-600 mb-2">Initiate Contact</p>
+                <h2 class="text-3xl font-bold text-navy-900 tracking-tight mb-3">Let's Connect</h2>
+                <p class="text-slate-600 text-sm">Open for brand marketing opportunities, retail campaigns, and project collaborations.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Quick Contact Info -->
+                <div class="lg:col-span-5 space-y-4">
+                    
+                    <!-- Location Card -->
+                    <div class="p-5 rounded-xl bg-stonebg border border-stone-200 flex items-center space-x-4">
+                        <div class="w-10 h-10 rounded-lg bg-accent-50 text-accent-600 flex items-center justify-center shrink-0 font-bold">
+                            <i data-lucide="map-pin" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Location</p>
+                            <p class="text-sm font-bold text-navy-900">Lapu-Lapu City, Cebu, Philippines</p>
+                        </div>
+                    </div>
+
+                    <!-- Email Card -->
+                    <div class="p-5 rounded-xl bg-stonebg border border-stone-200 flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 rounded-lg bg-accent-50 text-accent-600 flex items-center justify-center shrink-0 font-bold">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Email Direct</p>
+                                <a href="mailto:quimatstephen@gmail.com" class="text-sm font-bold text-navy-900 hover:text-accent-600">quimatstephen@gmail.com</a>
+                            </div>
+                        </div>
+                        <button onclick="copyToClipboard('quimatstephen@gmail.com', 'Email address copied!')" title="Copy Email" class="p-2 text-slate-400 hover:text-navy-900 rounded-lg hover:bg-stone-200/60 transition-colors">
+                            <i data-lucide="copy" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+
+                    <!-- Phone Card -->
+                    <div class="p-5 rounded-xl bg-stonebg border border-stone-200 flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 rounded-lg bg-accent-50 text-accent-600 flex items-center justify-center shrink-0 font-bold">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Mobile Contact</p>
+                                <p class="text-xs font-bold text-navy-900">+63 927 223 7133</p>
+                                <p class="text-xs font-bold text-navy-900">+63 993 227 5927</p>
+                            </div>
+                        </div>
+                        <button onclick="copyToClipboard('+639272237133', 'Phone number copied!')" title="Copy Phone" class="p-2 text-slate-400 hover:text-navy-900 rounded-lg hover:bg-stone-200/60 transition-colors">
+                            <i data-lucide="copy" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Interactive Form -->
+                <div class="lg:col-span-7 bg-stonebg p-8 rounded-2xl border border-stone-200">
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-xs font-semibold text-slate-700 uppercase mb-1">Your Name</label>
+                                <input type="text" id="name" required placeholder="John Doe" class="w-full px-4 py-2.5 rounded-lg border border-stone-300 bg-white text-navy-900 text-sm focus:outline-none focus:ring-2 focus:ring-accent-600/30">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-xs font-semibold text-slate-700 uppercase mb-1">Email Address</label>
+                                <input type="email" id="email" required placeholder="john@company.com" class="w-full px-4 py-2.5 rounded-lg border border-stone-300 bg-white text-navy-900 text-sm focus:outline-none focus:ring-2 focus:ring-accent-600/30">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="subject" class="block text-xs font-semibold text-slate-700 uppercase mb-1">Subject</label>
+                            <input type="text" id="subject" required placeholder="Marketing Collaboration Opportunity" class="w-full px-4 py-2.5 rounded-lg border border-stone-300 bg-white text-navy-900 text-sm focus:outline-none focus:ring-2 focus:ring-accent-600/30">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-xs font-semibold text-slate-700 uppercase mb-1">Message</label>
+                            <textarea id="message" rows="4" required placeholder="Hello Stephen, I would like to discuss..." class="w-full px-4 py-2.5 rounded-lg border border-stone-300 bg-white text-navy-900 text-sm focus:outline-none focus:ring-2 focus:ring-accent-600/30"></textarea>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="w-full py-3.5 px-6 rounded-lg bg-navy-900 hover:bg-accent-600 text-white font-medium text-sm transition-all duration-200 flex items-center justify-center space-x-2">
+                            <span>Send Inquiry</span>
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-8 border-t border-stone-200">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+            <p>© 2026 Stephen M. Quimat. Brand Marketing Portfolio.</p>
+            <div class="flex items-center space-x-6">
+                <span>Lapu-Lapu City, Cebu</span>
+                <a href="#home" class="hover:text-navy-900 transition-colors">Back to Top ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 toast-transition pointer-events-none">
+        <div class="bg-navy-900 text-white px-4 py-3 rounded-xl shadow-lg flex items-center space-x-3 text-sm font-medium">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400"></i>
+            <span id="toast-message">Action successful</span>
+        </div>
+    </div>
+
+    <!-- Application Script -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Drawer Handler
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIconOpen = document.getElementById('menu-icon-open');
+        const menuIconClose = document.getElementById('menu-icon-close');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuIconOpen.classList.toggle('hidden');
+            menuIconClose.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIconOpen.classList.remove('hidden');
+                menuIconClose.classList.add('hidden');
+            });
+        });
+
+        // Copy to Clipboard System
+        function copyToClipboard(text, successMsg) {
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            showToast(successMsg || 'Copied to clipboard!');
+        }
+
+        // Toast Feedback System
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+            
+            toastMessage.textContent = message;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        // Form Submit Handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const submitBtn = document.getElementById('submit-btn');
+            
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<span>Sending...</span>`;
+
+            setTimeout(() => {
+                showToast('Message sent! Stephen will respond shortly.');
+                document.getElementById('contact-form').reset();
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = `<span>Send Inquiry</span><i data-lucide="send" class="w-4 h-4"></i>`;
+                lucide.createIcons();
+            }, 1000);
+        }
+
+        // Generate Downloadable Resume Brief
+        function downloadResumeSummary() {
+            const resumeText = `STEPHEN M. QUIMAT
+Brand Marketing Professional
+Lapu-Lapu City, Cebu | quimatstephen@gmail.com | +63 927 223 7133 / +63 993 227 5927
+
+PROFESSIONAL SUMMARY
+Results-driven marketing professional with hands-on experience in retail marketing, promotional campaigns, store openings, events, and digital marketing. Proven ability to translate marketing plans into organized, timely, and customer-focused executions while taking on increasing responsibility and leadership.
+
+EXPERIENCE
+- Brand Marketing Supervisor - Supermarket | Metro Retail Stores Group, Inc. (MRSGI) (July 2026 - Present)
+- Brand Marketing Assistant - Supermarket | Metro Retail Stores Group, Inc. (MRSGI) (July 2025 - July 2026)
+- General Virtual Assistant | Freelance Social Media Marketing (March 2024 - July 2025)
+- Sales & Marketing Intern | The Hospital at Maayo (THAM) (February 2025 - June 2025)
+
+EDUCATION
+- Bachelor of Science in Business Administration Major in Marketing Management | Cebu Technological University (A.Y. 2024-2025)
+- Technical-Vocational Livelihood (TVL) Major in ICT | Asian Learning Center (With Honors)
+
+CERTIFICATIONS
+- Google Workspace Training | Metro Retail Stores Group Inc.
+- Healthcare Administration Training Program | Brightroot Virtual Assistants
+- US Medical Billing Training Program | Brightroot Virtual Assistants
+- HIPAA Compliance Awareness Training | Brightroot Virtual Assistant
+
+SKILLS
+- Creative & Marketing: Canva, CapCut, Social Media Content Creation, Copywriting, Graphic Design
+- Digital Marketing: Facebook Meta Business Suite, Social Media Management
+- AI & Productivity: ChatGPT, GEMINI, Google Workspace, MS Office
+`;
+
+            const element = document.createElement('a');
+            const file = new Blob([resumeText], {type: 'text/plain'});
+            element.href = URL.createObjectURL(file);
+            element.download = "Stephen_Quimat_Marketing_Resume_Summary.txt";
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+            
+            showToast('Resume Brief downloaded!');
+        }
+    </script>
+</body>
+</html>
